@@ -1,0 +1,20 @@
+<template>
+    <template if:true={selectedcontact}>
+        <img
+            src={selectedcontact.Picture__c}
+            alt="Profile photo"
+        />
+        <p>{selectedcontact.Name}</p>
+        <p>{selectedcontact.Title}</p>
+        <p>
+            <lightning-formatted-phone
+                value={selectedcontact.Phone}
+            ></lightning-formatted-phone>
+        </p>
+        <p>
+            <lightning-formatted-email
+                value={selectedcontact.Email}
+            ></lightning-formatted-email>
+        </p>
+    </template>
+</template>
