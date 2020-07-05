@@ -36,7 +36,7 @@
         <name>region4</name>
         <type>Region</type>
     </flexiPageRegions>
-    <masterLabel>MyDemoNew</masterLabel>
+    <masterLabel>MyDemo</masterLabel>
     <template>
         <name>flexipage:appHomeTemplateHeaderThreeColumns</name>
     </template>

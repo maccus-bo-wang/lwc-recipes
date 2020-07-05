@@ -1,0 +1,93 @@
+<template>
+    <lightning-tabset variant="scoped">
+        <lightning-tab label="新增样品申请">
+            <div class="c-container">
+                <lightning-layout horizontal-align="space">
+                    <lightning-layout-item padding="around-small" class="custom-MM">
+                        <div class="custom-card">
+                        <lightning-card title="Hello" icon-name="custom:custom14">
+                            <lightning-layout horizontal-align="spread">
+                                <lightning-combobox 
+                                    name="hospital"
+                                    label="医院"
+                                    value={val1}
+                                    placeholder="Select Progress"
+                                    options={options1}
+                                    onchange={handleChange}
+                                    required
+                                    class="custom-ZZ">
+                                </lightning-combobox>
+                                
+                                <lightning-combobox 
+                                    name="dept"
+                                    label="科室"
+                                    value={val2}
+                                    placeholder="Select Progress"
+                                    options={options2}
+                                    onchange={handleChange}
+                                    required
+                                    class="custom-ZZ">
+                                </lightning-combobox>
+                            </lightning-layout>
+                        </lightning-card>
+                        </div>
+                        <div class="custom-card">
+                        <lightning-card title="Hello" icon-name="custom:custom14" >
+                            <div class="slds-m-around_medium">
+                                Hello, sfdsf
+                            </div>
+                        </lightning-card>
+                        </div>
+                        <template if:true={isShow}>
+                            <div class="custom-card">
+                            <lightning-card title="Hello" icon-name="custom:custom14" >
+                                <div class="slds-m-around_medium">
+                                    Hello, sfdsf
+                                </div>
+                            </lightning-card>
+                            </div>
+                        </template>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" class="custom-RIGHT">
+                        <div class="custom-card">
+                        <lightning-card title="Hello" icon-name="custom:custom14">
+                            <div class="slds-m-around_medium">
+                                Hello, sfdsf
+                            </div>
+                        </lightning-card>
+                        </div>
+                    </lightning-layout-item>
+                
+                </lightning-layout>
+                <lightning-layout-item class="custom-btn">                
+                    <lightning-button-group>
+                        <lightning-button label="Refresh" onclick={handleClick}></lightning-button>
+                        <lightning-button label="Edit"></lightning-button>
+                        <lightning-button label="Save" icon-name="utility:save"></lightning-button>
+                        <lightning-button-menu alternative-text="Show menu" variant="border-filled" disabled>
+                            <lightning-menu-item label="Menu Item One" value="item1"></lightning-menu-item>
+                            <lightning-menu-item label="Menu Item Two" value="item2"></lightning-menu-item>
+                            <lightning-menu-item label="Menu Item Three" value="item3"></lightning-menu-item>
+                        </lightning-button-menu>
+                    </lightning-button-group>
+                </lightning-layout-item>
+            </div>
+        </lightning-tab>
+        
+
+        
+        <lightning-tab name="tab2" label="查看本月申请单">
+            <lightning-datatable
+                    key-field="id"
+                    columns={columns}
+                    data={data}
+                    hide-checkbox-column
+                    default-sort-direction={defaultSortDirection}
+                    sorted-direction={sortDirection}
+                    sorted-by={sortedBy}
+                    onsort={onHandleSort}>
+            </lightning-datatable>
+        </lightning-tab>
+        
+    </lightning-tabset>
+</template>

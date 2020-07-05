@@ -1,0 +1,37 @@
+.c-container {
+    border: 1px solid #d8dde6;
+    margin: 10px 0 20px 0;
+}
+
+.custom-box {
+    text-align: center;
+    background-color: #f4f6f9;
+    padding: 1rem;
+    border: 1px solid #d8dde6;
+}
+
+.custom-MM {
+    width: 70%;
+}
+
+.custom-RIGHT {
+    width: 30%;
+}
+
+.custom-ZZ {
+    width: 50%;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.custom-card {
+    padding-block-end: 10px;
+    margin-block-end: 10px;
+    margin-block-start: 10px;
+}
+
+.custom-btn {
+    display: flex;
+    justify-content: center;
+    margin-block-end: 8px;
+}
