@@ -38,9 +38,10 @@ workflows:
           filters:
             branches:
               ignore:
-                - master
+                - circleci-project-setup
+
       - deploy-prod:
           filters:
             branches:
               only:
-                - master
+                - circleci-project-setup
