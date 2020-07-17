@@ -39,6 +39,7 @@ workflows:
             branches:
               ignore:
                 - circleci-project-setup
+                - circleci-with-full-apex
 
       - deploy-prod:
           filters:
