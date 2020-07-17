@@ -6,7 +6,7 @@
         <div class="slds-m-around_medium">
             <template if:true={contacts}>
                 <template for:each={contacts} for:item="contact">
-                    <p key={contact.Id}>{contact.Name}</p>
+                    <p key={contact.Id}>{contact.Name} : {contact.Picture__c}</p>
                 </template>
             </template>
             <template if:true={error}>

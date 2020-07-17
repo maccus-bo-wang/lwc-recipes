@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="demoPicItem" icon-name="custom:custom30">
+        <div class="slds-m-around_medium">
+            <template if:true={picItem}>
+                <img src={picItem} alt="Profile photo1" />
+            </template>
+            <!--
+            <p>{girl.name}</p>
+            
+            <p>{title}</p>
+            <p>
+                <lightning-formatted-phone
+                    value={phone}
+                ></lightning-formatted-phone>
+            </p>
+            <p>
+                <lightning-formatted-email
+                    value={email}
+                ></lightning-formatted-email>
+            </p>
+            -->
+        </div>
+
+        <c-view-source source="lwc/demoPicItem" slot="footer">
+            The description of DemoPicItem comes here.
+        </c-view-source>
+    </lightning-card>
+</template>
