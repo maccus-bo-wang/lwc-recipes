@@ -22,6 +22,15 @@ public with sharing class DemoPicItem {
         return demoList;
     }
 
+    @AuraEnabled
+    public static string findPicList(DemoPicItem.DemoPicItemList ilt) {
+            for (DemoPicItemInfo item : ilt.ItemList) {
+                System.debug('Id=>' + item.Id + ',Name=>' + item.Name + ',Path=>' + item.Path);
+            }
+            System.debug('JSON.serialize(ilt):' + JSON.serialize(ilt));
+            return JSON.serialize(ilt);
+    }
+
     public class DemoPicItemInfo {
 
         @AuraEnabled 
@@ -32,5 +41,10 @@ public with sharing class DemoPicItem {
 
         @AuraEnabled 
         public String Path {get;set;}
+    }
+
+    public class DemoPicItemList {
+        @AuraEnabled
+        public List<DemoPicItemInfo> ItemList {get;set;}     
     }
 }

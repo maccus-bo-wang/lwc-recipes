@@ -36,7 +36,7 @@ export default class ApexImperativeMethodWithComplexParams extends LightningElem
                 someInnerInteger: this.numberValue
             });
         }
-
+        console.log('parameterObject:\n' + JSON.stringify(parameterObject));
         // Calling the imperative Apex method with the JSON
         // object as parameter.
         checkApexTypes({ wrapper: parameterObject })
