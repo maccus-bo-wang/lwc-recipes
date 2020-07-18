@@ -11,7 +11,7 @@ public with sharing class DemoPicItem {
         ];*/
         System.debug('key:' + key);
         List<DemoPicItem.DemoPicItemInfo> demoList = new List<DemoPicItem.DemoPicItemInfo>();
-        for(DemoPic__c itr: [SELECT Id, Name, Path__c FROM DemoPic__c]) {
+        for(DemoPic__c itr: [SELECT Id, Name, Path__c FROM DemoPic__c WHERE Name LIKE :key AND Path__c != null]) {
             DemoPicItem.DemoPicItemInfo item = new DemoPicItem.DemoPicItemInfo();
             item.Id = itr.Id;
             item.Name = itr.Name;
