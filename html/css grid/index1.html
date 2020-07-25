@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        CSS Grids
+    </title>
+    <style>
+        .wrapper {
+            display: grid;            
+            /*grid-template-columns: 1fr 2fr;*/
+            grid-template-columns: repeat(4, 2fr);
+            /*grid-template-columns: 30% 30% 40%;*/
+            grid-gap: 1em;
+            grid-auto-rows: minmax(100px, auto);
+        }
+        .wrapper > div {
+            background: #eee;
+            padding: 1em;            
+        }
+
+        .wrapper > div:nth-child(odd) {
+            background: #ddd;
+        }
+
+        .nested {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1em;
+            grid-auto-rows: 70px;
+        }
+
+        .nested > div {
+            border: #566 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            人员/角色
+            线上会议的组织
+            支持SOP
+            培训资料
+            沟通渠道
+            考核与实际操作
+            激励机制
+            人员/角色
+            线上会议的组织
+            支持SOP
+            培训资料
+            沟通渠道
+            考核与实际操作
+            激励机制
+            人员/角色
+            线上会议的组织
+            支持SOP
+            培训资料
+            沟通渠道
+            考核与实际操作
+            激励机制
+            人员/角色
+            线上会议的组织
+            支持SOP
+            培训资料
+            沟通渠道
+            考核与实际操作
+            激励机制
+            人员/角色
+            线上会议的组织
+            支持SOP
+            培训资料
+            沟通渠道
+            考核与实际操作
+            激励机制
+
+        </div>
+        <div class="nested">
+            <div>
+                Lorem
+            </div>
+            <div>
+                Lorem
+            </div>
+            <div>
+                Lorem
+            </div>
+            <div>
+                Lorem
+            </div>
+            <div>
+                Lorem
+            </div>
+
+        </div>
+        <div>
+            人员/角色
+            线上会议的组织
+            支持SOP
+            培训资料
+            沟通渠道
+            考核与实际操作
+            激励机制
+        </div>
+        <div>
+            人员/角色
+            线上会议的组织
+            支持SOP
+            培训资料
+            沟通渠道
+            考核与实际操作
+            激励机制
+        </div>
+        <div >
+            人员/角色
+            线上会议的组织
+            支持SOP
+            培训资料
+            沟通渠道
+            考核与实际操作
+            激励机制
+        </div>
+        <div>
+            人员/角色
+            线上会议的组织
+            支持SOP
+            培训资料
+            沟通渠道
+            考核与实际操作
+            激励机制
+        </div>
+    </div>
+</body>
+</html>
